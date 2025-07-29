@@ -1,8 +1,8 @@
 
 
-var cja = require ('./script.js');
+var cjas = require ('./script.js');
 var b =17;
 var a=15;
 
-console.log(cja);
+console.log(cjas);
 
