@@ -1,5 +1,11 @@
-var c= 16;
-var d=165;
-var e=666;
-var f =999;
-module.exports ={c,d,e,f};
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send('Hello from saad');
+});
+
+app.listen(3000, () => {
+  console.log('Server running on http://localhost:3000');
+});
+
