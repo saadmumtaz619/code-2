@@ -1,11 +1,16 @@
 const express = require('express');
+
 const app = express();
-
-app.get('/', (req, res) => {
-  res.send('Hello from saad');
+app.use(function(req,res,next){
+  console.log("hello bhayia");
+  next();
 });
 
-app.listen(3000, () => {
-  console.log('Server running on http://localhost:3000');
+app.get("/profile",(req,res) => {
+  res.send("hello saad");
 });
 
+app.get("/",(req,res)=>{
+  res.send("hello shayan")
+});
+app.listen(3000);
