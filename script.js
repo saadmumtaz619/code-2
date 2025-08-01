@@ -1,16 +1,15 @@
-const express = require('express');
+const express= require('express');
+const app=express();
 
-const app = express();
-app.use(function(req,res,next){
-  console.log("hello bhayia");
+const middleware=(req,res,next)=>{
+  console.log("middleware execute");
   next();
-});
-
-app.get("/profile",(req,res) => {
-  res.send("hello saad");
-});
-
+};
 app.get("/",(req,res)=>{
-  res.send("hello shayan")
-});
+  res.send("hello saad");
+})
+
+app.get("/profile",(req,res)=>{
+  res.send('hello shayan');
+})
 app.listen(3000);
