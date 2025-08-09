@@ -1,10 +1,14 @@
-let fruits = ["apple", "banana", "cherry", "banana"];
+const fs = require("fs");
 
-let index = fruits.indexOf("banana");
+const filename = "saad.txt"
 
-console.log(index); // Output: 1 (pehli "banana" ka index)
+try {
+    fs.rename(filename, "shayan.txt", function (err) {
+        if (err) console.error(err);
+        else console.log("newfile");
+    })
 
-
-let arr=[1,2,3,4,5,6];
-let saas=arr.indexOf(4);
-console.log(saas);
+    fs.rename("shayan.txt", "saad.txt")
+} catch (error) {
+   console.log("an error occur while managing file", error.message)
+}
