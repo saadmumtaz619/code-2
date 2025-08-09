@@ -11,4 +11,5 @@ try {
     fs.rename("shayan.txt", "saad.txt")
 } catch (error) {
    console.log("an error occur while managing file", error.message)
+//    cons
 }
