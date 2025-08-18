@@ -1,14 +1,14 @@
-
 const fs = require("fs");
-
-fs.unlink("chacha.txt", (err) => {
-  if (err) {
-    if (err.code === 'ENOENT') {
-      console.log("File pehle hi delete ho chuki hai ya exist nahi karti.");
-    } else {
-      console.error(err);
-    }
-  } else {
-    console.log("File delete ho gayi!");
+fs.readFile("saad.txt", "utf8", function (err, data) {
+  if (err) return console.error("read error:" + err);
+  
+ if (!fs.existsSync("chacha.txt")) {
+    console.log("chacha.txt pehle exist nahi karti, main nayi bana raha hoon...");
   }
+
+  fs.appendFile("chacha.txt",data, function (err) {
+    if (err) console.error("write error:" + err);
+    else console.log("done");
+  });
+
 });
