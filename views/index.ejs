@@ -9,12 +9,17 @@
 </head>
 <body>
     <div class="w-full h-full bg-zinc-900 p-19 text-white">
+
+        <div class="nav mb-10">
+            <a class="text-blue-500" href="/read">Read users</a>
+        </div>
         <h1 class="text-3xl tracking-tighter mb-3">create User</h1>
-        <form action="">
-            <input class="px-8 py-2 border-2 border-zinc-800 rounded-lg outline-null" type="text" placeholder="name">
-            <input class="px-8 py-2 border-2 border-zinc-800 rounded-lg outline-null"type="text" placeholder="email">
-            <input class="px-8 py-2 border-2 border-zinc-800 rounded-lg outline-null" type="text" placeholder="imageurl">
+        <form action="/create" method="post">
+            <input class="px-8 py-2 border-2 border-zinc-800 rounded-lg outline-null" type="text" name="name" placeholder="name">
+            <input class="px-8 py-2 border-2 border-zinc-800 rounded-lg outline-null"type="text" name="email" placeholder="email">
+            <input class="px-8 py-2 border-2 border-zinc-800 rounded-lg outline-null" type="text" name="image url" placeholder="imageurl">
             <input class="px-8 py-2 bg-blue-500 rounded-lg" type="submit" value="Create User">
         </form>
+        </div>
 </body>
 </html>

@@ -13,4 +13,7 @@ app.get('/',(req,res)=>{
 app.get('/read',(req,res)=>{
     res.render("read.ejs")
 })
+app.post('/create',(req,res)=>{
+    res.render("read.ejs")
+})
 app.listen(3000);
